@@ -15,10 +15,13 @@ namespace Shapes
 
         // goal for Wednesday = pick a part of tree and implement
         // half on linked list implementation and half on tree stuff
-        public Color FillColor { get; }
-        public Color BorderColor { get; }
+        public Color FillColor{ get; set; }
+        public Color BorderColor { get; set; }
 
-        public float Area() { throw new NotImplementedException(); }
-        public float Perimeter() { throw new NotImplementedException(); }
+        // it will still ask to be implemented, but this pushes it off to a child class "abstract"
+        public abstract float Area();
+        public abstract float Perimeter();
     }
+
+
 }

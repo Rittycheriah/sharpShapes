@@ -1,0 +1,7 @@
+C:\Users\Rainu\Desktop\SharpShapes\UnitTestShapes\obj\Debug\UnitTestShapes.csprojResolveAssemblyReference.cache
+C:\Users\Rainu\Desktop\SharpShapes\UnitTestShapes\bin\Debug\UnitTestShapes.dll
+C:\Users\Rainu\Desktop\SharpShapes\UnitTestShapes\bin\Debug\UnitTestShapes.pdb
+C:\Users\Rainu\Desktop\SharpShapes\UnitTestShapes\bin\Debug\Shapes.dll
+C:\Users\Rainu\Desktop\SharpShapes\UnitTestShapes\bin\Debug\Shapes.pdb
+C:\Users\Rainu\Desktop\SharpShapes\UnitTestShapes\obj\Debug\UnitTestShapes.dll
+C:\Users\Rainu\Desktop\SharpShapes\UnitTestShapes\obj\Debug\UnitTestShapes.pdb

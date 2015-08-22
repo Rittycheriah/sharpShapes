@@ -16,8 +16,14 @@ namespace UnitTestShapes
         // Quadrilateral (implementation) 4 sides, perimeter (add 4 sides), 
         //** Will BE ABSTRACT ^^ 
 
-        private class MyMockShape : Shape
+        public class MyMockShape : Shape
         {
+            public MyMockShape()
+            {
+                BorderColor = Color.IndianRed;
+                FillColor = Color.PapayaWhip;
+            }
+
             public override float Area()
             {
                 throw new NotImplementedException();
@@ -30,20 +36,34 @@ namespace UnitTestShapes
 
         }
 
-        MyMockShape omgMyShape = new MyMockShape();
-
         [TestMethod]
         public void TestThatAbstractShapeClassHasFillColor()
         {
-            omgMyShape.FillColor = Color.PapayaWhip;
-            Assert.AreEqual(Color.PapayaWhip, omgMyShape.FillColor);
+            MyMockShape testShape = new MyMockShape();
+            Assert.AreEqual(Color.PapayaWhip, testShape.FillColor);
         }
 
         [TestMethod]
         public void TestThatAbstractShapeClassHasBorderColor()
         {
-            omgMyShape.BorderColor = Color.IndianRed;
-            Assert.AreEqual(Color.IndianRed, omgMyShape.BorderColor);
+            MyMockShape testShape = new MyMockShape();
+            Assert.AreEqual(Color.IndianRed, testShape.BorderColor);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(NotImplementedException))]
+        public void TestAbstractShapeHasArea()
+        {
+            MyMockShape testShape = new MyMockShape();
+            testShape.Area();
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(NotImplementedException))]
+        public void TestAbstractShapeHasPerimeter()
+        {
+            MyMockShape testShape = new MyMockShape();
+            testShape.Perimeter();
         }
     }
 }

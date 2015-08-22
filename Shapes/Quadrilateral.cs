@@ -8,16 +8,26 @@ namespace Shapes
 {
     public abstract class Quadrilateral : Shape
     {
-        public float Side1 { get; set; }
-        public float Side2 { get; set; }
-        public float Side3 { get; set; }
-        public float Side4 { get; set; }
+        public float Side1Top { get; set; }
+        public float Side2Right { get; set; }
+        public float Side3Bottom { get; set; }
+        public float Side4Left { get; set; }
+
+        //public Quadrilateral(float side1top, float side2right, float side3bottom, float side4left)
+        //{
+
+        //}
 
         public abstract override float Area();
 
         public override float Perimeter()
         {
-            return this.Side1 + this.Side2 + this.Side3 + this.Side4;
+            if (Side1Top == 0 || Side2Right == 0 || Side3Bottom == 0 || Side4Left == 0)
+            {
+                throw new ArgumentException();
+            }
+
+            return this.Side1Top + this.Side2Right + this.Side3Bottom + this.Side4Left;
         }
     }
 }

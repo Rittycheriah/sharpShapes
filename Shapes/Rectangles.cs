@@ -10,12 +10,12 @@ namespace Shapes
     {
         public override float Area()
         {
-            return Side1 * Side2;
+            return Side1Top * Side2Right;
         }
 
         public override float Perimeter()
         {
-            return (Side1 * 2) + (Side2 * 2);
+            return (Side1Top * 2) + (Side2Right * 2);
         }
     }
 }

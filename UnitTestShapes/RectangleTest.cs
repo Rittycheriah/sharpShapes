@@ -11,8 +11,8 @@ namespace UnitTestShapes
         public void RectangleAreaTest()
         {
             var testRectangle = new Rectangles();
-            testRectangle.Side1 = 8;
-            testRectangle.Side2 = 4;
+            testRectangle.Side1Top = 8;
+            testRectangle.Side2Right = 4;
 
             Assert.AreEqual(testRectangle.Area(), 32);
         }
@@ -21,8 +21,8 @@ namespace UnitTestShapes
         public void RectanglePerimeterTest()
         {
             var testRectangle = new Rectangles();
-            testRectangle.Side1 = 8;
-            testRectangle.Side2 = 4;
+            testRectangle.Side1Top = 8;
+            testRectangle.Side2Right = 4;
 
             Assert.AreEqual(testRectangle.Perimeter(), 24);
         }

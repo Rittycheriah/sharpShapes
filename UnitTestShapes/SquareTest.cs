@@ -10,8 +10,7 @@ namespace UnitTestShapes
         [TestMethod]
         public void SquareAreaTest()
         {
-            Squares testSq = new Squares();
-            testSq.Side1Top = 10;
+            Squares testSq = new Squares(10);
 
             Assert.AreEqual(testSq.Area(), 100);
         }
@@ -19,8 +18,7 @@ namespace UnitTestShapes
         [TestMethod]
         public void SquarePerimeterTest()
         {
-            Squares testSq = new Squares();
-            testSq.Side1Top = 10;
+            Squares testSq = new Squares(10);
 
             Assert.AreEqual(testSq.Perimeter(), 40);
         }

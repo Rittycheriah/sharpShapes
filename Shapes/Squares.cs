@@ -6,16 +6,12 @@ using System.Threading.Tasks;
 
 namespace Shapes
 {
-    public class Squares : Quadrilateral
+    public class Squares : Rectangles
     {
-        public override float Area()
+        public Squares (int sideLength)
         {
-            return Side1Top * Side1Top;
-        }
-
-        public override float Perimeter()
-        {
-            return Side1Top * 4;
+            Side1Top = sideLength;
+            Side2Right = sideLength;
         }
     }
 }

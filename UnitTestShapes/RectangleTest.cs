@@ -10,7 +10,7 @@ namespace UnitTestShapes
         [TestMethod]
         public void RectangleAreaTest()
         {
-            var testRectangle = new Rectangles();
+            Rectangles testRectangle = new Rectangles();
             testRectangle.Side1Top = 8;
             testRectangle.Side2Right = 4;
 
@@ -20,7 +20,7 @@ namespace UnitTestShapes
         [TestMethod]
         public void RectanglePerimeterTest()
         {
-            var testRectangle = new Rectangles();
+            Rectangles testRectangle = new Rectangles();
             testRectangle.Side1Top = 8;
             testRectangle.Side2Right = 4;
 

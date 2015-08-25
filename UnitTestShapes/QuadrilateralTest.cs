@@ -25,15 +25,26 @@ namespace UnitTestShapes
         }
 
     [TestMethod]
+    [ExpectedException(typeof(ArgumentException))]
+        public void TestQuadNoNegativeSides()
+        {
+            MyQuad testquad = new MyQuad();
+            testquad.Side1Top = 2;
+            testquad.Side2Right = 2;
+            testquad.Side3Bottom = 2;
+            testquad.Side4Left = -2;
+        }
+
+    [TestMethod]
         public void QuadriLateralCanComputePerimeter()
         {
-            MyQuad myTestQuad = new MyQuad();
-            myTestQuad.Side1Top = 2;
-            myTestQuad.Side2Right = 2;
-            myTestQuad.Side3Bottom = 2;
-            myTestQuad.Side4Left = 2;
+            MyQuad Quad = new MyQuad();
+            Quad.Side1Top = 2;
+            Quad.Side2Right = 2;
+            Quad.Side3Bottom = 2;
+            Quad.Side4Left = 2;
 
-            Assert.AreEqual(myTestQuad.Perimeter(), 8);     
+            Assert.AreEqual(Quad.Perimeter(), 8);     
         }
 
     }

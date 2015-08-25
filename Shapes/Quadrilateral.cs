@@ -8,10 +8,75 @@ namespace Shapes
 {
     public abstract class Quadrilateral : Shape
     {
-        public float Side1Top { get; set; }
-        public float Side2Right { get; set; }
-        public float Side3Bottom { get; set; }
-        public float Side4Left { get; set; }
+        private float side1top;
+        private float side2right;
+        private float side3bottom;
+        private float side4left;
+
+        public float Side1Top
+        {
+            get { return side1top; }
+
+            set
+            {
+                if (value <= 0.0)
+                {
+                    throw new ArgumentException();
+                }
+                else
+                {
+                    side1top = value;
+                }
+            }
+        }
+
+        public float Side2Right
+        {
+            get { return side2right; }
+
+            set
+            {
+                if (value <= 0.0)
+                {
+                    throw new ArgumentException();
+                }
+                else
+                {
+                    side2right = value;
+                }
+            }
+        }
+
+        public float Side3Bottom
+        {
+            get { return side3bottom; }
+
+            set {
+                    if (value <= 0.0)
+                    {
+                        throw new ArgumentException();
+                    }
+                    else
+                    {
+                        side3bottom = value;
+                    }
+                }
+            } 
+
+        public float Side4Left
+        {
+          get { return side4left; }
+          set {
+                if (value <= 0.0)
+                {
+                    throw new ArgumentException();
+                }
+                else
+                {
+                    side4left = value;
+                }
+            }
+        }
 
         //public Quadrilateral(float side1top, float side2right, float side3bottom, float side4left)
         //{
@@ -22,7 +87,7 @@ namespace Shapes
 
         public override float Perimeter()
         {
-            if (Side1Top == 0 || Side2Right == 0 || Side3Bottom == 0 || Side4Left == 0)
+            if (Side1Top < 0 || Side2Right < 0 || Side3Bottom < 0 || Side4Left < 0)
             {
                 throw new ArgumentException();
             }
